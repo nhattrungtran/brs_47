@@ -1,0 +1,46 @@
+<%= will_paginate @books %>
+<% @books.each do |book| %>
+  <div class="well">
+    <div class="media">
+      <%= link_to get_image(book, "media-object"), book, class: "pull-left" %>
+      <div class="media-body">
+        <h4 class="media-heading"><%= book.title %></h4>
+          <p class="text-right"><%= book.author %></p>
+          <p><%= truncate(book.description, length: Settings.limit_len) %>
+          <%= link_to t("admin.books.read_more"), book %></p>
+          <ul class="list-inline list-unstyled">
+          <li><span><i class="glyphicon glyphicon-calendar"></i> <%= book.publish_date %> </span></li>
+          <li>|</li>
+          <span><i class="glyphicon glyphicon-comment"></i></span>
+          <li>|</li>
+          <li>
+            <% i = Settings.minimum_rate %>
+            <% while i <= book.rating.floor do %>
+              <span class="glyphicon glyphicon-star"></span>
+              <% i += Settings.minimum_rate %>
+            <% end %>
+            <% if book.rating.floor < Settings.max_rate %>
+              <% j = Settings.minimum_rate %>
+                <% while j <= Settings.max_rate - book.rating.floor do %>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                  <% j += Settings.minimum_rate %>
+                <% end %>
+            <% end %>
+            <label><%= book.rating %>-</label>
+          </li>
+            <%= link_to t("admin.books.edit"), edit_admin_book_path book %>
+          <li>
+            <%= link_to t("admin.books.delete"), [:admin, book], method: :delete,
+              data: {confirm: t("admin.books.are_you_sure")} %></li>
+          <li>
+            <span><i class="fa fa-facebook-square"></i></span>
+            <span><i class="fa fa-twitter-square"></i></span>
+            <span><i class="fa fa-google-plus-square"></i></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+<% end %>
+<%= will_paginate @books %>

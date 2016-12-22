@@ -1,0 +1,12 @@
+<% provide :title, t("admin.books.view_title_create_book") %>
+<% provide :button_text, t("admin.books.btn_created_book") %>
+<% if verify_admin_access? %>
+  <h1><%= t "admin.books.view_title_create_book" %></h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-books">
+        <%= render "form_book" %>
+      </div>
+    </div>
+  </div>
+<% end %>
