@@ -1,0 +1,12 @@
+<% provide :title, t("admin.title_category") %>
+<% provide :button_text, t("admin.title_category") %>
+<% if verify_admin_access? %>
+    <h1><%= t "admin.title_category" %></h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="form-books">
+          <%= render "form_category" %>
+        </div>
+      </div>
+    </div>
+<% end %>

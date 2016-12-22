@@ -1,0 +1,17 @@
+<%= will_paginate @categories %>
+<% @categories.each do |category| %>
+  <div class="well">
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading"><%= category.name %></h4>
+          <ul>
+            <%= link_to t("admin.edit_category"),
+              edit_admin_category_path(category) %> |
+            <%= link_to t("admin.delete_category"), [:admin, category],
+              method: :delete, data: {confirm: t("admin.are_you_sure")} %>
+          </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
+<%= will_paginate @categories %>
