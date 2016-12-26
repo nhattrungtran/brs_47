@@ -1,0 +1,20 @@
+<div class="profile-sidebar">
+  <div class="profile-userpic">
+    <%= link_to user do %>
+      <%= image_tag user.avatar.url, class: "img-responsive",
+        size: Settings.size_image_avatar %>
+    <% end %>
+  </div>
+  <div class="profile-usertitle">
+    <div class="profile-usertitle-name">
+      <%= user.name %>
+    </div>
+    <div class="profile-usertitle-email">
+      <%= user.email %>
+    </div>
+  </div>
+  <% if logged_in? %>
+    <%= render "follow_form" %>
+  <% end %>
+  <%= render partial: "shared/stats", locals: {user: user} %>
+</div>

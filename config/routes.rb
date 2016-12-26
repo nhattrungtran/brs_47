@@ -10,8 +10,12 @@ Rails.application.routes.draw do
   namespace :admin do
     root "static_pages#home"
     resources :categories, except: :show
-    resources :books
+    resources :users
+    resources :books, only: [:index, :show]
   end
-  resources :users
-  resources :books, only: [:index, :show]
+  resources :users, except: [:destroy, :index] do
+    resources :following, only: :index
+    resources :followers, only: :index
+  end
+  resources :relationships, only: [:create, :destroy]
 end

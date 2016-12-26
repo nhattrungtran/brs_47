@@ -6,6 +6,14 @@ en:
     profile: "Profile"
     settings: "Settings"
     logout: "Log out"
+    shared:
+      follow:
+        follow_bt: "Follow"
+      unfollow:
+        unfollow_bt: "Unfollow"
+      stat:
+        title_follower: "Followers"
+        title_following: "Following"
     layouts:
       footer:
         title: "Reivew book system"
@@ -46,15 +54,6 @@ en:
         edit_user_brand: "Update your profile"
     shared:
       error_msg: "The form contains"
-  remember_me: "Remember me on this computer"
-  title_login: "Log in"
-  button_login: "Log in"
-  sign_up_now: "Sign up now!"
-  app:
-    helplers:
-      base_title: "Ruby on Rails Tutorial Sample App"
-    controllers:
-      record_not_exist: "Not Exist"
     books:
       lable_form_rate_book: "Average user rating"
       max_rate: "5"
@@ -66,12 +65,22 @@ en:
         author: "Author: "
         newest_book: "Newest Books"
         ratest_book: "Hot Books"
-  account_successfully: "Account successfully!"
-  update_user_successfully: "Profile updated"
-  user_delete_successfully: "User deleted"
+  remember_me: "Remember me on this computer"
+  title_login: "Log in"
+  button_login: "Log in"
+  sign_up_now: "Sign up now!"
+  app:
+    not_exits: "Not Exits"
+    helplers:
+      base_title: "Ruby on Rails Tutorial Sample App"
+    controllers:
+      record_not_exist: "Not Exist"
       application:
         pleaselogin: "Please log in."
       invalid_email: "Invalid email/password combination"
+  account_successfully: "Account successfully!"
+  update_user_successfully: "Profile updated"
+  user_delete_successfully: "User deleted"
   admin_book: "Success"
   admin:
     cant_find_category: "Can't found category"
@@ -82,10 +91,10 @@ en:
     unsuccess_destroyed_category: "UnSuccess destroy category"
     success_updated_category: "Success updated category"
     category_updated_success: "Category_updated_success"
-    title_category: "Create Categories"    
+    title_category: "Create Categories"
     btn_create_category: "Create my Category"
     edit_category: "Edit"
-    delete_category: "Delete"    
+    delete_category: "Delete"
     are_you_sure: "Are you sure?"
     books:
       errors_not_exit: "Error not exits"
@@ -99,3 +108,5 @@ en:
       edit: "Edit"
       delete: "Delete"
       are_you_sure: "Are you sure?"
+    delete_category: "Delete"
+    are_you_sure: "Are you sure?"

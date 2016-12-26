@@ -8,4 +8,5 @@ max_length_inline_description: 150
 remember_one: 1
 limit_length: 150
 minimum_rate: 1
-max_rate: 5
+size_image_avatar: 100
+status_respone: "OK"
