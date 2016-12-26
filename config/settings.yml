@@ -5,3 +5,4 @@ limit_book: 5
 max_rate: 5
 size_image_book: 140
 max_length_inline_description: 150
+remember_one: 1
