@@ -26,6 +26,21 @@ en:
       home:
         header: "Welcome to the Review Book System"
         sign_up: "Sign up now!"
+    user:
+      sign-up:
+        sign_up_title: "Sign up"
+        bt_create_user: "Create my account"
+      update:
+        edit_title: "Edit user"
+        bt_update_user: "Save changes"
+        edit_user_brand: "Update your profile"
+    shared:
+      error_msg: "The form contains"
   app:
     helplers:
       base_title: "Ruby on Rails Tutorial Sample App"
+    controllers:
+      record_not_exist: "Not Exist"
+  account_successfully: "Account successfully!"
+  update_user_successfully: "Profile updated"
+  user_delete_successfully: "User deleted"
