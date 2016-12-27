@@ -41,6 +41,17 @@ en:
       base_title: "Ruby on Rails Tutorial Sample App"
     controllers:
       record_not_exist: "Not Exist"
+    books:
+      lable_form_rate_book: "Average user rating"
+      max_rate: "5"
+      read_book: "You read this book"
+      label_review: "Reviews"
+      label_content_review: "Content: "
+      show:
+        publish_date: "Published: "
+        author: "Author: "
+        newest_book: "Newest Books"
+        ratest_book: "Hot Books"
   account_successfully: "Account successfully!"
   update_user_successfully: "Profile updated"
   user_delete_successfully: "User deleted"

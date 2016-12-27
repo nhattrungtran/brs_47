@@ -1,4 +1,25 @@
 <div class="center jumbotron">
-  <h1><%= t "views.static_pages.home.header" %></h1>  
-  <%= link_to t("views.static_pages.home.sign_up"), signup_path, class: "btn btn-lg btn-primary" %>
+  <h1><%= t "views.static_pages.home.header" %></h1>
+  <%= link_to t("views.static_pages.home.sign_up"),
+    signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+<div class="container">
+  <div class="row">
+    <h3><%= t "views.static_pages.home.newest_book" %></h3>
+    <div class="col-sm-12">
+      <hr/>
+      <div class="review-block">
+        <%= render "book_newest" %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h3><%= t "views.static_pages.home.ratest_book" %></h3>
+    <div class="col-sm-12">
+      <hr/>
+      <div class="review-block">
+        <%= render "book_hotest" %>
+      </div>
+    </div>
+  </div>
 </div>

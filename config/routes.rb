@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :categories, except: [:show]
   end
   resources :users
+  resources :books, only: [:index, :show]
 end

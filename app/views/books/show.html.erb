@@ -1,0 +1,53 @@
+<% provide :title, @book.title %>
+<div class="row">
+  <div class="col-sm-3">
+    <%= link_to set_image_book @book, @book %>
+    <div class="review-block-name">
+      <%= t "views.books.show.author" %><%= @book.author %>
+    </div>
+    <div class="review-block-date">
+      <%= t "views.books.show.publish_date" %><%= @book.publish_date %>
+    </div>
+    <div class="rating-block">
+      <h4><%= t "views.books.lable_form_rate_book" %></h4>
+      <h2 class="bold padding-bottom-7">
+        <%= @book.rating %> / <%= t "views.books.max_rate"%>
+      </h2>
+      <% i = 1 %>
+      <% while i <= @book.rating.floor do %>
+        <button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+        </button>
+        <% i += 1 %>
+      <% end %>
+      <% if @book.rating.floor < Settings.max_rate %>
+        <% j = 1 %>
+        <% while j <= Settings.max_rate - @book.rating.floor do %>
+          <button type="button" class="btn btn-default btn-grey btn-sm"
+            aria-label="Left Align">
+            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          </button>
+          <% j += 1 %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="review-block-rate"></div>
+    <div class="review-block-rate">
+      <button type="button" class="btn btn-danger btn-circle">
+        <i class="glyphicon glyphicon-heart"></i>
+      </button>
+    </div>
+    <div class="review-block-rate">
+      <a class="btn icon-btn btn-success" href="#">
+        <span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success">
+        </span><%= t "views.books.read_book"%>
+      </a>
+    </div>
+    <div class="review-block-title"><%= @book.title %></div>
+    <div class="review-block-description">
+      <%= simple_format @book.description %>
+    </div>
+  </div>
+</div>
