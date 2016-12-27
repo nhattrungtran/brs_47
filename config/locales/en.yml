@@ -1,5 +1,10 @@
-en:
+en:  
   views:
+    account: "account"
+    users: "Users"
+    profile: "Profile"
+    settings: "Settings"
+    logout: "Log out"
     layouts:
       footer:
         title: "Reivew book system"
@@ -10,6 +15,10 @@ en:
         home: "Home"
         help: "Help"
         login: "Login"
+        users: "Users"
+        profile: "Profile"
+        settings: "Settings"
+        logout: "Log out"
     static_pages:
       about:
         title: "About"
@@ -36,6 +45,10 @@ en:
         edit_user_brand: "Update your profile"
     shared:
       error_msg: "The form contains"
+  remember_me: "Remember me on this computer"
+  title_login: "Log in"
+  button_login: "Log in"
+  sign_up_now: "Sign up now!"
   app:
     helplers:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -55,6 +68,9 @@ en:
   account_successfully: "Account successfully!"
   update_user_successfully: "Profile updated"
   user_delete_successfully: "User deleted"
+      application:
+        pleaselogin: "Please log in."
+      invalid_email: "Invalid email/password combination"
   admin_book: "Success"
   admin:
     cant_find_category: "Can't found category"
@@ -69,4 +85,5 @@ en:
     btn_create_category: "Create my Category"
     edit_category: "Edit"
     delete_category: "Delete"
-    are_you_sure: "Are you sure?"
+    are_you_sure: "Are you sure?"   
+
