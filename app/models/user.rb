@@ -31,7 +31,7 @@ class User < ApplicationRecord
       if ActiveModel::SecurePassword.min_cost?
         cost = BCrypt::Engine::MIN_COST
       else
-        cost = BCrypt::Engine.cost        
+        cost = BCrypt::Engine.cost
         BCrypt::Password.create string, cost: cost
       end
     end
@@ -53,5 +53,13 @@ class User < ApplicationRecord
 
   def forget
     update_attribute :remember_digest, nil
-  end  
+  end
+
+  def follow other_user
+    active_relationships.create followed_id: other_user.id
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
 end

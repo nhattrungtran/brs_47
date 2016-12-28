@@ -1,0 +1,23 @@
+<% user ||= current_user %>
+<div class="profile-usermenu">
+  <ul class="nav">
+    <li class="active">
+      <%= link_to user_following_index_path user do %>
+        <i class="glyphicon glyphicon-user"></i>
+        <strong id="following" class="stat">
+          <%= user.following.size %>
+        </strong>
+        <%= t "views.shared.stat.title_following" %>
+      <% end %>
+    </li>
+    <li class="active">
+      <%= link_to user_followers_path user do %>
+        <i class="glyphicon glyphicon-user"></i>
+        <strong id="followers" class="stat">
+          <%= user.followers.size %>
+        </strong>
+        <%= t "views.shared.stat.title_follower" %>
+      <% end %>
+    </li>
+  </ul>
+</div>
