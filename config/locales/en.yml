@@ -1,4 +1,5 @@
-en:  
+en:
+  cancel: "Cancel"
   views:
     account: "account"
     users: "Users"
@@ -84,6 +85,17 @@ en:
     title_category: "Create Categories"    
     btn_create_category: "Create my Category"
     edit_category: "Edit"
-    delete_category: "Delete"
-    are_you_sure: "Are you sure?"   
-
+    delete_category: "Delete"    
+    are_you_sure: "Are you sure?"
+    books:
+      errors_not_exit: "Error not exits"
+      created_book: "Book created"
+      deleted_book: "success delete book"
+      updated_book: "success update book"
+      unsuccess_deleted_book: "unsuccess delete book"
+      view_title_create_book: "Create Books"
+      btn_created_book: "Create my book"
+      read_more: "Read more"
+      edit: "Edit"
+      delete: "Delete"
+      are_you_sure: "Are you sure?"

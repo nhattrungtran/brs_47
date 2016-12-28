@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   namespace :admin do
     root "static_pages#home"
-    resources :categories, except: [:show]
-  end  
+    resources :categories, except: :show
+    resources :books
+  end
   resources :users
   resources :books, only: [:index, :show]
 end

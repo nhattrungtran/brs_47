@@ -7,4 +7,8 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def get_data_category
+    Category.all.collect {|p| [ p.name, p.id ]}
+  end
 end
