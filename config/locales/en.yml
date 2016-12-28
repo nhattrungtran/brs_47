@@ -78,6 +78,8 @@ en:
     helplers:
       base_title: "Ruby on Rails Tutorial Sample App"
     controllers:
+      books:
+        not_found: "Book not found"
       record_not_exist: "Not Exist"
       reviews:
         error_save: "Can't create review"

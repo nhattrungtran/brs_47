@@ -14,6 +14,9 @@ class User < ApplicationRecord
   has_many :active_rates, class_name: Rating.name,
     foreign_key: :user_id, dependent: :destroy
   has_many :rating, through: :active_rates, source: :book
+  has_many :active_bookmarks, class_name: Bookmark.name,
+    foreign_key: :user_id, dependent: :destroy
+  has_many :favouriting, through: :active_bookmarks, source: :book
   has_many :requests
   has_many :comments
   has_many :activities
@@ -61,5 +64,18 @@ class User < ApplicationRecord
 
   def following? other_user
     following.include? other_user
+  end
+
+  def favourite book
+    active_bookmarks.create book_id: book.id
+  end
+
+  def unfavourite book
+    active = active_bookmarks.find_by book_id: book.id
+    active.destroy if active
+  end
+
+  def favouriting? book
+    favouriting.include? book
   end
 end
