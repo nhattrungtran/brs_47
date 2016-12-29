@@ -21,4 +21,6 @@ Rails.application.routes.draw do
     resources :reviews
   end
   resources :relationships, only: [:create, :destroy]
+  resources :books, only: [:index, :show]
+  resources :favourites, only: [:create, :destroy]
 end
