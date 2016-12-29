@@ -65,6 +65,10 @@ en:
         author: "Author: "
         newest_book: "Newest Books"
         ratest_book: "Hot Books"
+        review: "Reviews"
+        content_review: "Content: "
+        book_new_review: "Add a review"
+        submit_bt: "Submit"
   remember_me: "Remember me on this computer"
   title_login: "Log in"
   button_login: "Log in"
@@ -75,6 +79,11 @@ en:
       base_title: "Ruby on Rails Tutorial Sample App"
     controllers:
       record_not_exist: "Not Exist"
+      reviews:
+        error_save: "Can't create review"
+        not_found: "Review not found"
+      books:
+        not_found: "Book not found"
       application:
         pleaselogin: "Please log in."
       invalid_email: "Invalid email/password combination"
